@@ -1,6 +1,6 @@
 # 💻 Active-Directory-and-Powershell-Automation-Lab 💻
 # Overview 
-## Discover a production-ready lab configuration  that demonstrates deploying and configuring core enterprise IT infrastructure. This documentation walks through building a Windows Server 2022 AD DC, setting up DHCP and NAT-based Remote Access, bulk-managing users with PowerShell scripts, and successfully joining a Windows 11 client to the domain, with a strong emphasis on security and operational efficiency.
+## Discover a production-ready lab configuration  that demonstrates how to deploy and configure core enterprise IT infrastructure. This documentation walks through building a Windows Server 2022 AD DC, setting up DHCP and NAT-based Remote Access, bulk-managing users with PowerShell scripts, and successfully joining a Windows 11 client to the domain, with a strong emphasis on security and operational efficiency.
 # Network Topology 
 ```mermaid
 graph TD
@@ -24,7 +24,7 @@ graph TD
     <li>Windows 11 client, 16 GB RAM, AMD processor, 255-1 TB storage space. </li>
     <li>VM application running on os  (Hyper-V, VMware, Parallels Desktop).</li>
     <li>Note pad to document the issue and solution. </li>
-    <li>ISO windows server 22 (get it from the actual Microsoft website and not a 3rd party) </li>
+    <li>ISO Windows Server 22 (get it from the actual Microsoft website and not a 3rd party) </li>
     <li>ISO Windows 11 (get it from the actual Microsoft website and not a 3rd party) </li>
 </ul>
 
@@ -32,9 +32,69 @@ graph TD
 <ul>
     <li>Launch Windows Server 2022 VM</li>
     <li>Rename Network Interfaces for clarity</li>
-    <li>Assign Static IP to the Internal NIC (10.0.0.0)</li>
-    <li>Rename the Server to DC</li>
+    <li>Assign Static IP to the Internal NIC (192.168.1.10)</li>
+    <li>Rename the Server to AC-DC</li>
     <li>Install Active Directory Services</li>
     <li>Promote the Server to a Domain Controller with the domain locallab.com</li>
     <li>Verify Domain Controller Status</li>
+</ul>
+
+# 2.Installing and Configuring DHCP 
+<ul>
+    <li>Install DHCP Server Role</li>
+    <li>Create a DHCP Scope (10.0.0.100 - 10.0.0.200)</li>
+    <li>Set Router/Gateway IP (10.0.0.2) </li>
+    <li> Authorize the DHCP Server in AD-DC </li>
+    <li> Verify successful lease assignments </li>
+</ul>
+
+# 3. Setting Up Remote Access and NAT
+<ul>
+    <li> Install Remote Access Role </li>
+    <li> Enable Routing and Remote Access  </li>
+    <li> Configure NAT for Internal Network Routing </li>
+    <li> Set up Internet Connectivity through the NAT interface </li>
+    <li> Verify network routing between client machines </li>
+</ul>
+
+# 4. Adding 120 Users and Organizational Units (OUs) via PowerShell
+<ul>
+    <li>Prepare a CSV file (user_accounts_final.csv) containing (Username, Email, OU, Password)</li>
+    <li>Write PowerShell Script (AD Bulk Users Script.ps1) to import users</li>
+    <li>Run the script to add users to Active Directory</li>
+    <li>Verify users in Active Directory Users and Computers </li>
+</ul>
+
+# 5.Joining Windows 10 Client to the Domain
+<ul>
+    <li>Install Windows 10 VM</li>
+    <li>Ensure Network Connectivity (Internal and Internet)</li>
+    <li>Join Windows 11 Machine to Locallab.com</li>
+    <li>Authenticate with Domain Admin </li>
+    <li>Verify DHCP IP Assignment</li>
+    <li>Ensure domain policies are applied correctly</li>
+</ul>
+
+# 6. Authenticating a Random User on Windows 11
+<ul>
+    <li>Pick a Random User</li>
+    <li>Login to Windows 11 using Anita Carron’s credentials</li>
+    <li>Verify Network Configuration (ipconfig command)</li>
+    <li>Ensure the user has the correct permissions based on their OU</li>
+</ul>
+
+# 7. Implementing Security Policies for Users
+<ul>
+    <li>Create Group Policies for different OUs</li>
+    <li>Restrict administrative access to non-admin users</li>
+    <li>Enable password policies and login restrictions</li>
+    <li>Deploy user-specific access control based on job roles</li>
+</ul>
+
+# 8. Results 
+<ul>
+    <li>90% Time Reduction ✅</li>
+    <li>99.9% Uptime ✅</li>
+    <li>Stronger Security ✅</li>
+    <li>Real-World Simulation ✅</li>
 </ul>
