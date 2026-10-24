@@ -1,4 +1,4 @@
-# 💻 Active-Directory-and-Powershell-Automation-Lab 💻
+# 💻 Active-Directory-and-Powershell-Bash-Automation-Lab 💻
 # Overview 
 ## Discover a production-ready lab configuration  that demonstrates how to deploy and configure core enterprise IT infrastructure. This documentation walks through building a Windows Server 2022 AD DC, setting up DHCP and NAT-based Remote Access, bulk-managing users with PowerShell scripts, and successfully joining an Ubuntu client by using Bash to the domain, with a strong emphasis on security and operational efficiency.
 # Network Topology 
