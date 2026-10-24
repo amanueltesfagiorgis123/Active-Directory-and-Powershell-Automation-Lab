@@ -43,7 +43,7 @@ graph TD
 <ul>
     <li>Install DHCP Server Role</li>
     <li>Create a DHCP Scope (10.0.0.100 - 10.0.0.200)</li>
-    <li>Set Router/Gateway IP (10.0.0.2) </li>
+    <li>Set Router/Gateway IP (10.0.0.10) </li>
     <li> Authorize the DHCP Server in AD-DC </li>
     <li> Verify successful lease assignments </li>
 </ul>
