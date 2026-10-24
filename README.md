@@ -32,7 +32,7 @@ graph TD
 <ul>
     <li>Launch Windows Server 2022 VM</li>
     <li>Rename Network Interfaces for clarity</li>
-    <li>Assign Static IP to the Internal NIC (192.168.1.10)</li>
+    <li>Assign Static IP to the Internal NIC (10.0.0.10)</li>
     <li>Rename the Server to AC-DC</li>
     <li>Install Active Directory Services</li>
     <li>Promote the Server to a Domain Controller with the domain locallab.com</li>
