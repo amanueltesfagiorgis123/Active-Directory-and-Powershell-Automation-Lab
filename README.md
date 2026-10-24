@@ -21,12 +21,11 @@ graph TD
 
 # Hardware Requirement 
 <ul>
-    <li>Windows 11 Home, 16 GB RAM, AMD processor, 255-1 TB storage space. </li>
+    <li>Windows 11 Home, 16 GB RAM (or more), AMD processor, 255-1 TB storage space. </li>
     <li>VM application running on os  (Hyper-V, VMware, Parallels Desktop).</li>
     <li>Note pad to document the issue and solution. </li>
     <li>ISO Windows Server 22 (get it from the actual Microsoft website and not a 3rd party) </li>
     <li>Ubuntu (get it from the actual Ubuntu website and not a 3rd party) </li>
-    <li>Oracle Virtualbox Vertulizer </li>
 </ul>
 
 # 1. Setting up Active Directory 
