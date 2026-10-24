@@ -1,12 +1,12 @@
 # 💻 Active-Directory-and-Powershell-Automation-Lab 💻
 # Overview 
-## Discover a production-ready lab configuration  that demonstrates how to deploy and configure core enterprise IT infrastructure. This documentation walks through building a Windows Server 2022 AD DC, setting up DHCP and NAT-based Remote Access, bulk-managing users with PowerShell scripts, and successfully joining a Windows 11 client to the domain, with a strong emphasis on security and operational efficiency.
+## Discover a production-ready lab configuration  that demonstrates how to deploy and configure core enterprise IT infrastructure. This documentation walks through building a Windows Server 2022 AD DC, setting up DHCP and NAT-based Remote Access, bulk-managing users with PowerShell scripts, and successfully joining an Ubuntu client by using Bash to the domain, with a strong emphasis on security and operational efficiency.
 # Network Topology 
 ```mermaid
 graph TD
     A[Internet] --> B[Windows Server 2022 - NAT]
     B --> C[Windows Server 2022 - AD DC]
-    C --> D[Windows 11 Client]
+    C --> D[Ubuntu Client]
 ```
 # Objective 
 <ul>
@@ -21,11 +21,12 @@ graph TD
 
 # Hardware Requirement 
 <ul>
-    <li>Windows 11 client, 16 GB RAM, AMD processor, 255-1 TB storage space. </li>
+    <li>Windows 11 Home, 16 GB RAM, AMD processor, 255-1 TB storage space. </li>
     <li>VM application running on os  (Hyper-V, VMware, Parallels Desktop).</li>
     <li>Note pad to document the issue and solution. </li>
     <li>ISO Windows Server 22 (get it from the actual Microsoft website and not a 3rd party) </li>
-    <li>ISO Windows 11 (get it from the actual Microsoft website and not a 3rd party) </li>
+    <li>Ubuntu (get it from the actual Ubuntu website and not a 3rd party) </li>
+    <li>Oracle Virtualbox Vertulizer </li>
 </ul>
 
 # 1. Setting up Active Directory 
@@ -59,17 +60,16 @@ graph TD
 
 # 4. Adding 120 Users and Organizational Units (OUs) via PowerShell
 <ul>
-    <li>Prepare a CSV file (user_accounts_final.csv) containing (Username, Email, OU, Password)</li>
-    <li>Write PowerShell Script (AD Bulk Users Script.ps1) to import users</li>
-    <li>Run the script to add users to Active Directory</li>
-    <li>Verify users in Active Directory Users and Computers </li>
+    <li>Write a PowerShell command  that adds OUs, departments, and sub-OUs.</li>
+    <li>Write a PowerShell command for  a John Doe user for finance with name, email, password, and username. </li>
+    <li>Write a PowerShell command that verifies your changes.</li>
 </ul>
 
-# 5.Joining Windows 10 Client to the Domain
+# 5.Joining Ubuntu Client to the Domain via Bash
 <ul>
-    <li>Install Windows 10 VM</li>
+    <li>Install Ubuntu VM</li>
     <li>Ensure Network Connectivity (Internal and Internet)</li>
-    <li>Join Windows 11 Machine to Locallab.com</li>
+    <li>Join Ubuntu Machine to Locallab.com</li>
     <li>Authenticate with Domain Admin </li>
     <li>Verify DHCP IP Assignment</li>
     <li>Ensure domain policies are applied correctly</li>
@@ -78,7 +78,7 @@ graph TD
 # 6. Authenticating a Random User on Windows 11
 <ul>
     <li>Pick a Random User</li>
-    <li>Login to Windows 11 using Anita Carron’s credentials</li>
+    <li>Login to Ubuntu using John Doe's credentials</li>
     <li>Verify Network Configuration (ipconfig command)</li>
     <li>Ensure the user has the correct permissions based on their OU</li>
 </ul>
