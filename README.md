@@ -74,7 +74,7 @@ graph TD
     <li>Ensure domain policies are applied correctly</li>
 </ul>
 
-# 6. Authenticating a Random User on Windows 11
+# 6. Authenticating a Random User on Ubantu
 <ul>
     <li>Pick a Random User</li>
     <li>Login to Ubuntu using John Doe's credentials</li>
